@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de CEP/Endereço</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="/assets/imagens/mapas-e-bandeiras.png" type="image/x-icon">
+    <script src="assets/js/script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="containerGeral">
+
+        <div class="containerCheckMudarLayout">
+            <span>Buscar CEP <br> via Endereço</span>
+            <input type="checkbox" id="checkMudarLayout">
+            <label for="checkMudarLayout" class="switch"></label>
+            <span>Buscar Endereço <br> via CEP</span>
+        </div> <!--containerCheckMudarLayout-->
+
+        <div class="containerBuscarCepViaEndereco">
+
+            <h1>Buscar CEP via Endereço</h1>
+
+            <div class="grid">
+
+                <div class="item item1">
+                    <label for="estados">Estado:</label>
+                    <select id="estados">
+                        <option value="" disabled selected>UF</option>
+                        <option value="AC">AC</option>
+                        <option value="AL">AL</option>
+                        <option value="AP">AP</option>
+                        <option value="AM">AM</option>
+                        <option value="BA">BA</option>
+                        <option value="CE">CE</option>
+                        <option value="DF">DF</option>
+                        <option value="ES">ES</option>
+                        <option value="GO">GO</option>
+                        <option value="MA">MA</option>
+                        <option value="MT">MT</option>
+                        <option value="MS">MS</option>
+                        <option value="MG">MG</option>
+                        <option value="PA">PA</option>
+                        <option value="PB">PB</option>
+                        <option value="PR">PR</option>
+                        <option value="PE">PE</option>
+                        <option value="PI">PI</option>
+                        <option value="RJ">RJ</option>
+                        <option value="RN">RN</option>
+                        <option value="RS">RS</option>
+                        <option value="RO">RO</option>
+                        <option value="RR">RR</option>
+                        <option value="SC">SC</option>
+                        <option value="SP">SP</option>
+                        <option value="SE">SE</option>
+                        <option value="TO">TO</option>
+                    </select> <!--select estados-->
+                </div> <!--item item1-->
+
+                <div class="item item2">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" placeholder="Itajaí">
+                </div> <!--item item2-->
+
+                <div class="item item3">
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" placeholder="Avenida Sete de Setembro">
+                </div> <!--item item3-->
+
+                <button id="btnBuscarCepViaEndereco">Buscar CEP</button>
+
+            </div> <!--grid-->
+
+
+            <div id="resultadoCEP">
+                <!--Resultado da busca CEP via endereço-->
+            </div>
+
+        </div> <!--containerBuscarCepEndereco-->
+
+
+        <!--SESSÃO BUSCAR ENDEREÇO VIA CEP-->
+
+
+        <div class="containerBuscarEnderecoViaCep" style="display: none;">
+            <h1>Buscar Endereço via CEP</h1>
+            <label for="cep" style="text-transform: uppercase;">Cep:</label>
+            <input type="number" id="cep" placeholder=" Digite o CEP. Ex: 88301201">
+            <button id="btnBuscarEnderecoViaCep">Buscar endereço</button><br><br>
+
+            <div id="resultadoEndereco">
+                <!--Resultado da busca endereço via CEP-->
+            </div>
+
+
+        </div> <!--containerBuscarEnderecoviaCep-->
+
+    </div> <!--containerGeral-->
+
+</body> <!--body-->
+
+</html>

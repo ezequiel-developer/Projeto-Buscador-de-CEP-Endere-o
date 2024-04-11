@@ -1,0 +1,163 @@
+/* Reset de estilos para garantir consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o corpo da página */
+body {
+    min-height: calc(100vh - 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    font-family: sans-serif;
+    background-color: gray;
+}
+
+/* Estilos para os títulos */
+h1 {
+    padding: 15px 0;
+}
+
+/* Estilos para labels e spans */
+label, span {
+    font-size: 18px;
+}
+
+/* Estilos para o container geral */
+.containerGeral {
+    width: 450px;
+    min-height: 370px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #063655;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .8);
+}
+
+/* Estilos para a grid */
+.grid {
+    width: 300px;
+    display: grid;
+    grid-template-columns: 80px 200px;
+    margin: 0 auto 20px; /* Adiciona margem inferior */
+    justify-content: space-between;
+}
+
+/* Estilos para os botões */
+#btnBuscarCepViaEndereco, #btnBuscarEnderecoViaCep {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    place-self: center; /* Centraliza o botão horizontal e verticalmente */
+    margin-top: 10px; /* Adiciona espaço acima do botão */
+    height: 30px;
+    padding: 5px;
+    border: none;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* Estilos para os itens */
+.item {
+    margin: 10px;
+}
+
+/* Estilos para os campos de estados */
+#estados {
+    width: 60px;
+    text-align: center;
+}
+
+/* Estilos para o campo de endereço */
+#endereco {
+    width: 100%;
+}
+
+/* Estilos para o campo de cidade */
+#cidade {
+    width: 100%;
+}
+
+/* Estilos para o terceiro item */
+.item3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+/* Estilos para inputs e selects */
+input, select {
+    border-radius: 6px;
+    padding: 4px;
+    border: none;
+    height: 30px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Estilos para o cabeçalho */
+.containerCheckMudarLayout {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    color: white;
+}
+
+/* Estilos para o switch de mudança de layout */
+.switch {
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+}
+
+.switch::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #063655;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    transition: 0.3s;
+}
+
+#checkMudarLayout {
+    display: none;
+}
+
+#checkMudarLayout:checked + .switch::before {
+    transform: translateX(20px);
+}
+
+/* Estilos para a tabela */
+.tabela {
+    border-collapse: collapse;
+    font-size: 14px;
+    width: 100%;
+}
+
+/* Estilos para cabeçalhos e células da tabela */
+th, td {
+    border: 2px solid black;
+    padding: 5px;
+}
+
+/* Estilos para os cabeçalhos da tabela */
+th {
+    text-transform: uppercase;
+}
+
+/* Estilos para o campo de CEP */
+#cep {
+    margin-bottom: 10px;
+    text-align: center;
+}
